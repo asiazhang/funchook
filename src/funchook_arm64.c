@@ -40,6 +40,9 @@
 #define IMM26_MASK 0x03FFFFFF
 #define IMM26_OFFSET(ins) ((int64_t)(int32_t)((ins) << 6) >> 4)
 
+#undef PAGE_SIZE
+#define PAGE_SIZE 4096
+
 // imm19 at bit 23~5
 #define IMM19_MASK 0x00FFFFE0
 #define IMM19_OFFSET(ins) (((int64_t)(int32_t)((ins) << 8) >> 11) & ~0x3l)
